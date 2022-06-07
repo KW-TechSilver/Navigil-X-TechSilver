@@ -1,0 +1,466 @@
+/*! nouislider - 11.1.0 - 2018-04-02 11:18:13 */
+/* Functional styling;
+* These styles are required for noUiSlider to function.
+* You don't need to change these rules to apply your design.
+*/
+/*
+This file was modified by Creative-Tim
+*/
+.wellness-target,
+.wellness-target * {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wellness-target {
+  top: 5;
+  position: relative;
+  direction: ltr;
+}
+
+.wellness-base,
+.wellness-connects {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Wrapper for all connect elements.
+*/
+.wellness-connects {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.wellness-connect,
+.wellness-origin {
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+/* Offset direction
+*/
+html:not([dir="rtl"]) .wellness-horizontal .wellness-origin {
+  left: auto;
+  right: 0;
+}
+
+/* Give origins 0 height/width so they don't interfere with clicking the
+* connect elements.
+*/
+.wellness-vertical .wellness-origin {
+  width: 0;
+}
+
+.wellness-horizontal .wellness-origin {
+  height: 0;
+}
+
+.wellness-handle {
+  position: absolute;
+}
+
+.wellness-state-tap .wellness-connect,
+.wellness-state-tap .wellness-origin {
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.wellness-state-drag * {
+  cursor: inherit !important;
+}
+
+/* Slider size and handle placement;
+*/
+.wellness-horizontal {
+  height: 4px;
+}
+
+.wellness-horizontal .wellness-handle {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  left: -4px;
+  top: -4px;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: all 0.2s ease-out;
+  border: 1px solid $brand-primary;
+  background: rgba(0, 0, 0, 0.2);
+  // background: transparent;
+  // background: $white-color;
+
+  @include shadow-2dp();
+}
+
+.wellness-vertical {
+  width: 2px;
+  margin: 0 15px;
+  height: 100%;
+}
+
+.wellness-vertical .wellness-handle {
+  box-sizing: border-box;
+  width: 14px;
+  height: 14px;
+  left: -6px;
+  top: -10px;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: all 0.2s ease-out;
+  border: 1px solid $brand-primary;
+  background: $white-color;
+
+  @include shadow-2dp();
+}
+
+html:not([dir="rtl"]) .wellness-horizontal .wellness-handle {
+  right: -6px;
+  left: auto;
+}
+
+/* Styling;
+* Giving the connect element a border radius causes issues with using transform: scale
+*/
+.wellness-target {
+  background-color: #c8c8c8;
+  border-radius: 3px;
+}
+
+.wellness-connects {
+  border-radius: 3px;
+}
+
+.wellness-connect {
+  background: #888;
+  border-radius: 3px;
+  -webkit-transition: background 450ms;
+  transition: background 450ms;
+}
+
+/* Handles and cursors;
+*/
+.wellness-draggable {
+  cursor: ew-resize;
+}
+
+.wellness-vertical .wellness-draggable {
+  cursor: ns-resize;
+}
+
+.wellness-handle {
+  border-radius: 3px;
+  background: #FFF;
+  cursor: default;
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+  -webkit-transition: 300ms ease 0s;
+  -moz-transition: 300ms ease 0s;
+  -ms-transition: 300ms ease 0s;
+  -o-transform: 300ms ease 0s;
+  transition: 300ms ease 0s;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.wellness-handle[data-handle="0"][data-handle="0"] {
+  background-color: $brand-danger;
+  border-color: $brand-danger;
+}
+.wellness-handle[data-handle="1"][data-handle="1"] {
+  background-color: $brand-warning;
+  border-color: $brand-warning;
+}
+.wellness-handle[data-handle="2"][data-handle="2"] {
+  background-color: $brand-success;
+  border-color: $brand-success;
+}
+.wellness-handle[data-handle="3"][data-handle="3"] {
+  background-color: $brand-warning;
+  border-color: $brand-warning;
+}
+.wellness-handle[data-handle="4"][data-handle="4"] {
+  background-color: $brand-danger;
+  border-color: $brand-danger;
+}
+
+.wellness-active {
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+}
+
+/* Disabled state;
+*/
+// [disabled] .wellness-connect {
+//   background: #B8B8B8;
+// }
+
+[disabled].wellness-target,
+[disabled].wellness-handle,
+[disabled] .wellness-handle {
+  cursor: not-allowed;
+}
+
+/* Base;
+*
+*/
+.wellness-pips,
+.wellness-pips * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wellness-pips {
+  position: absolute;
+  color: #999;
+}
+
+/* Values;
+*
+*/
+.wellness-value {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.wellness-value-sub {
+  color: grey;
+  font-size: 10px;
+}
+
+.wellness-value-large {
+  color: black;
+}
+
+/* Markings;
+*
+*/
+.wellness-marker {
+  position: absolute;
+  background: #CCC;
+}
+
+.wellness-marker-sub {
+  background: #AAA;
+}
+
+.wellness-marker-large {
+  background: #AAA;
+}
+
+/* Horizontal layout;
+*
+*/
+.wellness-pips-horizontal {
+  padding: 10px 0;
+  height: 0px;
+  top: -14px;
+  left: 0;
+  width: 100%;
+}
+
+.wellness-value-horizontal {
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+
+.wellness-rtl .wellness-value-horizontal {
+  -webkit-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+}
+
+.wellness-marker-horizontal.wellness-marker {
+  margin-left: -1px;
+  width: 2px;
+  height: 12px;
+}
+
+.wellness-marker-horizontal.wellness-marker-sub {
+  height: 10px;
+  top: 6px;
+}
+
+.wellness-marker-horizontal.wellness-marker-large {
+  height: 15px;
+  top: 9px;
+}
+
+/* Vertical layout;
+*
+*/
+.wellness-pips-vertical {
+  padding: 0 10px;
+  height: 100%;
+  top: 0;
+  left: 100%;
+}
+
+.wellness-value-vertical {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%, 0);
+  padding-left: 25px;
+}
+
+.wellness-rtl .wellness-value-vertical {
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+.wellness-marker-vertical.wellness-marker {
+  width: 5px;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.wellness-marker-vertical.wellness-marker-sub {
+  width: 10px;
+}
+
+.wellness-marker-vertical.wellness-marker-large {
+  width: 15px;
+}
+
+.wellness-tooltip {
+  display: none;
+  position: absolute;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #fff;
+  color: #000;
+  padding: 2px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tooltip-show {
+  display: block;
+}
+
+.wellness-active .wellness-tooltip {
+  display: block;
+}
+
+.wellness-horizontal .wellness-tooltip {
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 120%;
+}
+
+.wellness-vertical .wellness-tooltip {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 120%;
+}
+
+.c-warning {
+  background: $brand-warning;
+}
+
+.c-alert {
+  background: $brand-danger;
+}
+
+.c-baseline {
+  background: $brand-success;
+}
+
+.wellness-target {
+
+  & .wellness-handle {
+    border: 3px solid #4caf50;
+    background-color: #4caf50;
+  }
+  
+  &.slider-primary {
+
+    & .wellness-connect,
+    &.wellness-connect {
+      background-color: $brand-primary;
+    }
+
+    & .wellness-handle {
+      border-color: $brand-primary;
+    }
+  }
+
+  &.slider-info {
+
+    & .wellness-connect,
+    &.wellness-connect {
+      background-color: $brand-info;
+    }
+
+    & .wellness-handle {
+      border-color: $brand-info;
+    }
+  }
+
+  &.slider-success {
+
+    & .wellness-connect,
+    &.wellness-connect {
+      background-color: $brand-success;
+    }
+
+    & .wellness-handle {
+      border-color: $brand-success;
+    }
+  }
+
+  &.slider-warning {
+
+    & .wellness-connect,
+    &.wellness-connect {
+      background-color: $brand-warning;
+    }
+
+    & .wellness-handle {
+      border-color: $brand-warning;
+    }
+  }
+
+  &.slider-danger {
+
+    & .wellness-connect,
+    &.wellness-connect {
+      background-color: $brand-danger;
+    }
+
+    & .wellness-handle {
+      border-color: $brand-danger;
+    }
+  }
+
+  &.slider-rose {
+
+    & .wellness-connect,
+    &.wellness-connect {
+      background-color: $brand-rose;
+    }
+
+    & .wellness-handle {
+      border-color: $brand-rose;
+    }
+  }
+
+}

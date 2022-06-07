@@ -1,0 +1,15 @@
+export { default as daDK } from 'assets/img/flags/DK.png';
+export { default as deDE } from 'assets/img/flags/DE.png';
+export { default as enGB } from 'assets/img/flags/GB.png';
+export { default as enUS } from 'assets/img/flags/US.png';
+export { default as esES } from 'assets/img/flags/ES.png';
+export { default as fiFI } from 'assets/img/flags/FI.png';
+export { default as frFR } from 'assets/img/flags/FR.png';
+export { default as itIT } from 'assets/img/flags/IT.png';
+export { default as jaJP } from 'assets/img/flags/JP.png';
+export { default as noNO } from 'assets/img/flags/NO.png';
+export { default as plPL } from 'assets/img/flags/PL.png';
+export { default as ptPT } from 'assets/img/flags/PT.png';
+export { default as svSE } from 'assets/img/flags/SE.png';
+export { default as skSK } from 'assets/img/flags/SK.png';
+export { default as elGR } from 'assets/img/flags/GR.png';

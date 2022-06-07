@@ -1,0 +1,74 @@
+{
+  "project_info": {
+    "project_number": "724034242751",
+    "project_id": "navigil-mobile",
+    "storage_bucket": "navigil-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724034242751:android:25794f94b5653c5a701e0a",
+        "android_client_info": {
+          "package_name": "com.omantere.Navigil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724034242751-i8ggp3d9tdu22kkoqvd2aqnjkms0g3p5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeqQlIPBK_AfnV_2lGdks-jTPUIfTyWn8"
+        },
+        {
+          "current_key": "AIzaSyAwlmY8sOhmHGA-eYJYTC7ETeq4r7iQFGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724034242751-i8ggp3d9tdu22kkoqvd2aqnjkms0g3p5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724034242751:android:a275a9accd899623701e0a",
+        "android_client_info": {
+          "package_name": "com.zeeshan.Navigil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724034242751-i8ggp3d9tdu22kkoqvd2aqnjkms0g3p5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeqQlIPBK_AfnV_2lGdks-jTPUIfTyWn8"
+        },
+        {
+          "current_key": "AIzaSyAwlmY8sOhmHGA-eYJYTC7ETeq4r7iQFGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724034242751-i8ggp3d9tdu22kkoqvd2aqnjkms0g3p5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

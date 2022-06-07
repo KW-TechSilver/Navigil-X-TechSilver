@@ -1,0 +1,16 @@
+export const requiredPermissions = {
+  consoleMessaging: ['NavigilAdmin'],
+  adminMenu: ['NavigilAdmin'],
+  serviceDashboard: ['NavigilAdmin'],
+  healthDashboard: ['NavigilAdmin'],
+  imageImport: ['NavigilAdmin'],
+  heartRateChart: ['NavigilAdmin'],
+  deviceMenu: ['NavigilAdmin', 'CompanyAdmin', 'Relative', 'CompanyEmployee'],
+  wellnessLog: ['NavigilAdmin', 'CompanyAdmin'],
+  deviceList: ['NavigilAdmin', 'CompanyAdmin', 'CompanyGroupAdmin', 'Relative', 'CompanyEmployee'],
+  companies: ['NavigilAdmin'],
+  callLog: ['NavigilAdmin', 'CompanyAdmin'],
+  groups: ['NavigilAdmin', 'CompanyAdmin', 'CompanyGroupAdmin'],
+  users: ['NavigilAdmin', 'CompanyAdmin', 'CompanyGroupAdmin', 'Relative'],
+  profile: ['NavigilAdmin', 'CompanyAdmin', 'CompanyGroupAdmin', 'CompanyEmployee', 'Relative'],
+};
